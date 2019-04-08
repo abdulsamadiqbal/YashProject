@@ -1,0 +1,21 @@
+﻿@model YashProject.Models.GoldKrtMst
+
+@{
+    ViewBag.Title = "Gold";
+}
+
+<h2>Gold</h2>
+
+
+@using (Html.BeginForm("Gold", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.GoldType_ID, htmlAttributes: new { @class = "control-label" })
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.GoldType_ID, htmlAttributes: new { @class = "form-control" })
+    </div>
+    @Html.LabelFor(x => x.Gold_Crt, htmlAttributes: new { @class = "control-label" })
+    <div class="form-group">
+        @Html.TextBoxFor(x => x.Gold_Crt, htmlAttributes: new { @class = "form-control" })
+    </div>
+    <input type="submit" name="name" value="ADD" class="btn btn-info" />
+}
